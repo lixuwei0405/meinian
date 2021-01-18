@@ -40,6 +40,11 @@ public class TravelGroupServiceImpl implements TravelGroupService {
     }
 
     @Override
+    public List<TravelGroup> findAll() {
+        return travelGroupDao.findAll();
+    }
+
+    @Override
     public TravelGroup get(Integer id) {
         return travelGroupDao.get(id);
     }

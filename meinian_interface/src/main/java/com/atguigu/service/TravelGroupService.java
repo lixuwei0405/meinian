@@ -21,4 +21,6 @@ public interface TravelGroupService {
     void edit(Integer[] travelItemIds, TravelGroup travelGroup);
 
     void delete(Integer id);
+
+    List<TravelGroup> findAll();
 }

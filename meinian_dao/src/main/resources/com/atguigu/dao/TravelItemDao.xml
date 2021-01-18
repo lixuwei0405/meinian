@@ -68,4 +68,8 @@
     <select id="findAll" resultType="travelItem">
         select * from t_travelitem
     </select>
+
+    <select id="findTravelItemById" parameterType="integer" resultType="travelItem">
+        select * from t_travelitem where id in(select travelitem_id  from t_travelgroup_travelitem where travelgroup_id = #{id})
+    </select>
 </mapper>

@@ -13,6 +13,7 @@ public class MessageConstant {
     public static final String QUERY_TRAVELITEM_SUCCESS = "查询自由行成功";
     public static final String QUERY_TRAVELITEM_FAIL = "查询自由行失败";
     public static final String UPLOAD_SUCCESS = "上传成功";
+    public static final String UPLOAD_FAIL = "文件上传失败";
     public static final String ADD_TRAVELGROUP_FAIL = "新增报团游失败";
     public static final String ADD_TRAVELGROUP_SUCCESS = "新增报团游成功";
     public static final String DELETE_TRAVELGROUP_FAIL = "删除报团游失败";
@@ -67,4 +68,5 @@ public class MessageConstant {
     public static final String GET_SETMEAL_LIST_SUCCESS = "查询套餐列表数据成功";
     public static final String GET_SETMEAL_LIST_FAIL = "查询套餐列表数据失败";
     public static final String DELETE_TRAVELITEMFORID_FAIL = "存在关联数据不能直接删除";
+
 }

@@ -26,4 +26,8 @@ public interface TravelItemDao {
     int findCountByTravelItemId(Integer id);
 
     List<TravelItem> findAll();
+
+    //增加辅助方法
+    //根据跟团游的id查询自由行集合
+    List<TravelItem> findTravelItemById(Integer id);
 }

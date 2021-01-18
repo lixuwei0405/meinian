@@ -49,4 +49,25 @@
     <delete id="deleteTravelGroupById" parameterType="integer">
         delete from t_travelgroup where id = #{id}
     </delete>
+
+    <select id="findAll" resultType="travelGroup">
+        select * from t_travelgroup
+    </select>
+
+
+    <resultMap id="TravelGroupResultMap" type="travelGroup">
+        <id column="id" property="id"/>
+        <result column="code" property="code"/>
+        <result column="name" property="name"/>
+        <result column="helpCode" property="helpCode"/>
+        <result column="sex" property="sex"/>
+        <result column="remark" property="remark"/>
+        <result column="attention" property="attention"/>
+        <collection property="travelItems" ofType="travelItem" javaType="java.util.ArrayList" column="id" select="com.atguigu.dao.TravelItemDao.findTravelItemById"/>
+    </resultMap>
+
+    <select id="findTravelGroupById" resultMap="TravelGroupResultMap" parameterType="integer">
+        select * from t_travelgroup
+        where id in(select t_setmeal_travelgroup.travelgroup_id from t_setmeal_travelgroup where t_setmeal_travelgroup.setmeal_id = #{id})
+    </select>
 </mapper>

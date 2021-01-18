@@ -26,4 +26,10 @@ public interface TravelGroupDao {
     void deleteTravelGroupAndTravelItemByGroupId(Integer id);
 
     void deleteTravelGroupById(Integer id);
+
+    List<TravelGroup> findAll();
+
+    //辅助套餐查询的同时查询跟团游
+    //根据套餐id查询跟团游
+    List<TravelGroup> findTravelGroupById(Integer id);
 }
